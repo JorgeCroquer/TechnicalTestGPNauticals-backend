@@ -1,0 +1,13 @@
+{
+    "type": "postgres",
+    "username": "user",
+    "password": "password",
+    "host": "localhost",
+    "port": 35000,
+    "database": "db",
+    "entities": ["./src/modules/**/infrastructure layer/*.entity{.ts,.js}"],
+    "migrations": ["./src/common/database/migrations/*{.ts,.js}"],
+    "cli": {
+      "migrationsDir": "./src/common/database/migrations"
+    }
+}
