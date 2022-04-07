@@ -6,6 +6,7 @@ import { IFlightRepository } from './flight.repo';
 @Injectable()
 export class FlightsService {
   constructor(
+    //This receives a implementation flightRepository by DI
     @Inject('FlightRepositoryProvider')
     private readonly flightRepository: IFlightRepository,
   ) {}
@@ -26,6 +27,8 @@ export class FlightsService {
     await this.flightRepository.save(flight);
   }
 
+  //This methods gets all flights of the page provided 
+  //from the persistence layer
   async getFlights(page: number): Promise<FlightDTO[]> {
     return await this.flightRepository.getAll(page);
   }

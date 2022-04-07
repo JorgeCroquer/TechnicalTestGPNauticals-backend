@@ -5,6 +5,8 @@ import { FlightEntity } from './flight.entity';
 import { FlightsController } from './flights.controller';
 import { TypeORMFlightRepository } from './typeorm-flight-repo.adapter';
 
+//Here we select wich implementation of the Repo is going to be
+//injected in the service
 const selectedFlightsRepositoryProvider = {
   provide: 'FlightRepositoryProvider',
   useClass: TypeORMFlightRepository,

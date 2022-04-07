@@ -15,17 +15,17 @@ services:
       
     command: npm run start:dev
     depends_on: 
-      - postgres
+      - postgres-service
     environment: 
-      DATABASE_URL: postgres://user:password@postgres:5432/db
+      DATABASE_URL: postgres://user:password@postgres-service:5432/db
       NODE_ENV: development
       PORT: 3000
     ports:
       - 8080:3000
 
-  postgres:
+  postgres-service:
     image: postgres:14.2
-    container_name: postgres
+    container_name: postgres-service
     environment: 
       POSTGRES_USER: user
       POSTGRES_PASSWORD: password

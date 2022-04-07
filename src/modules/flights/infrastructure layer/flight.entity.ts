@@ -1,6 +1,8 @@
 import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
-import { flight_type, IFlight } from '../domain layer/flight.interface';
+import { IFlight } from '../domain layer/flight.interface';
 
+//This is a infrastructure implementation of the flight.
+//made with TypeORM
 @Entity()
 export class FlightEntity extends BaseEntity implements IFlight {
   @PrimaryGeneratedColumn()
@@ -34,10 +36,4 @@ export class FlightEntity extends BaseEntity implements IFlight {
   })
   duration: number;
 
-  @Column({
-    nullable: false,
-    type: 'enum',
-    enum: ['roundtrip', 'oneway'],
-  })
-  type: flight_type;
 }

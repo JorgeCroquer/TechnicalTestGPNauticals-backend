@@ -5,6 +5,8 @@ import { IFlightRepository } from '../application layer/flight.repo';
 import { IFlight } from '../domain layer/flight.interface';
 import { FlightEntity } from './flight.entity';
 
+
+//This implementation is a TypeORM adapter of the IFlightRepository port
 export class TypeORMFlightRepository implements IFlightRepository {
   constructor(
     @InjectRepository(FlightEntity)
@@ -23,7 +25,6 @@ export class TypeORMFlightRepository implements IFlightRepository {
       datetime: ormFlight.datetime,
       price: ormFlight.price,
       duration: ormFlight.duration,
-      type: ormFlight.type,
     };
   }
   async getAll(page: number): Promise<FlightDTO[]> {

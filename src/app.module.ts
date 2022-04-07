@@ -1,8 +1,6 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { FlightsModule } from './modules/flights/infrastructure layer/flights.module';
 
 @Module({
@@ -16,7 +14,7 @@ import { FlightsModule } from './modules/flights/infrastructure layer/flights.mo
     }),
     FlightsModule,
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}

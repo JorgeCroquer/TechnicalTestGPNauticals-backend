@@ -1,5 +1,3 @@
-export type flight_type = 'roundtrip' | 'oneway';
-
 export interface IFlight {
   id: number;
 
@@ -13,5 +11,4 @@ export interface IFlight {
 
   duration: number;
 
-  type: flight_type;
 }
