@@ -21,7 +21,6 @@ export class FlightsService {
       datetime: dto.datetime,
       price: dto.price,
       duration: dto.duration,
-      type: dto.type,
     };
 
     await this.flightRepository.save(flight);
