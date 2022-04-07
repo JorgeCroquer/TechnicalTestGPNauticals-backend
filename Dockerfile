@@ -35,6 +35,11 @@ ENV NODE_ENV=${NODE_ENV}
 # Set Working Directory
 WORKDIR /usr/src/app
 
+COPY package*.json ./
+
+RUN npm install
+
+RUN npm run build
 # Copy all from development stage
 COPY --from=development /usr/src/app/ .
 
