@@ -13,7 +13,7 @@ async function bootstrap() {
     .build();
 
   const document = SwaggerModule.createDocument(app, options);
-
+  console.log(`postgres://${process.env.DATABASE_USER}:${process.env.DATABASE_PASSWORD}@localhost:5432/db`)
   SwaggerModule.setup('api/docs', app, document);
 
   app.enableCors();

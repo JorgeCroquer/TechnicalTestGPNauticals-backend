@@ -13,7 +13,7 @@ services:
     volumes:
       - .:/usr/src/app
       
-    command: npm run start:prod
+    command: npm run start:dev
     depends_on: 
       - postgres-service
     environment: 

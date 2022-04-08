@@ -1,9 +1,9 @@
 {
     "type": "postgres",
-    "username": "user",
-    "password": "password",
+    "username": "jorge",
+    "password": "221099",
     "host": "localhost",
-    "port": 35000,
+    "port": 5432,
     "database": "db",
     "entities": ["./src/modules/**/infrastructure layer/*.entity{.ts,.js}"],
     "migrations": ["./src/common/database/migrations/*{.ts,.js}"],
